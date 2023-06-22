@@ -12,6 +12,12 @@ import { ChildComponent } from './data-binding-component/child/child.component';
 import { MySideNavComponent } from './my-side-nav/my-side-nav.component';
 import { RoundButtonDirective } from './round-button.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -25,13 +31,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ParentComponent,
     ChildComponent,
     MySideNavComponent,
-    RoundButtonDirective
+    RoundButtonDirective,
+    SideNavComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
