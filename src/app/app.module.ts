@@ -11,6 +11,7 @@ import { ParentComponent } from './data-binding-component/parent/parent.componen
 import { ChildComponent } from './data-binding-component/child/child.component';
 import { MySideNavComponent } from './my-side-nav/my-side-nav.component';
 import { RoundButtonDirective } from './round-button.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -29,7 +30,8 @@ import { RoundButtonDirective } from './round-button.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
