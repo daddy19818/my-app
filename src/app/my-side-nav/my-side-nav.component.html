@@ -1,0 +1,15 @@
+<!-- <button (click)="toggleMenu()">Menu</button> -->
+<!-- <button appRoundButton (click)="toggleMenu()">Menu</button> -->
+<button (click)="isMenuOpen =! isMenuOpen">Menu</button>
+<div class="my-side-nav" *ngIf="isMenuOpen" class="my-side-nav">
+    <ng-container *ngFor="let item of menuItems">
+
+        <div class="d-flex">
+            <i aria-hidden="true" class="{{item.icon}}"></i> {{item.name}}
+
+        </div>
+
+    </ng-container>
+    <button (click)="menuItems.push({name:'my name',icon:'s'})">add</button>
+
+</div>
