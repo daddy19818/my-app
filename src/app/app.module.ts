@@ -18,7 +18,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { RouterModule, Routes } from '@angular/router';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { UsersDetailsComponent } from './users-details/users-details.component';
+import { SearchImagesComponent } from './search-images/search-images.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ZoomImageComponent } from './zoom-image/zoom-image.component';
+const route :Routes = [
+  {path:'Home', component:DashBoardComponent},
+  {path:'Table',component:TableComponent},
+  {path:'Users',component:UsersDetailsComponent},
+  {path:'Search',component:SearchImagesComponent},
+  {path:'zoom-image',component:ZoomImageComponent}
 
+]
 
 
 @NgModule({
@@ -32,7 +52,12 @@ import { MatListModule } from '@angular/material/list';
     ChildComponent,
     MySideNavComponent,
     RoundButtonDirective,
-    SideNavComponent
+    SideNavComponent,
+    DashBoardComponent,
+    TableComponent,
+    UsersDetailsComponent,
+    SearchImagesComponent,
+    ZoomImageComponent
 
   ],
   imports: [
@@ -43,7 +68,15 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatGridListModule,
+    MatMenuModule,
+    RouterModule.forRoot(route),
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
