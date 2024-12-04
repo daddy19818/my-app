@@ -37,6 +37,7 @@ const route :Routes = [
   {path:'Users',component:UsersDetailsComponent},
   {path:'Search',component:SearchImagesComponent},
   {path:'zoom-image',component:ZoomImageComponent}
+  
 
 ]
 
